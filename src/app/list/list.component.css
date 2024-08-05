@@ -1,0 +1,6 @@
+ @media (max-width: 576px){
+    .w-85{
+        width: 85% !important;
+        height: 55% !important;
+    }   
+}

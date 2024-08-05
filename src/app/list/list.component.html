@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Desserts</h1>
+    <div class="row row-cols-3">
+        <div *ngFor="let item of productlist ; let i =index" class="w-25 ms-4 mt-3 " 
+             style=" border-radius: 10px; border: solid rgb(136, 136, 155); border-color: #9a7468;">
+            <div class="pt-1 w-100 position-relative container"  >
+                <img class=" w-100" style="border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;" 
+                     [src]="item.imgpath" alt="">
+                <button class="position-absolute top-100 mw-75 h-50 mh-75 w-85 w-75 start-50 translate-middle mt-1 bi bi-caret-down-fill" style=" border-radius: 15px; border-color: #9a7468;font-size: calc(0.5em + 0.5vw);  white-space: nowrap; 
+                width: 50px; 
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                border: 1px solid #9a7468;" 
+                (click)="addtoorder(i)">
+                    Add to cart
+                </button>
+            </div>
+            <div style="margin-top: 25px;">
+                <p class="text-muted">{{item.fname}}</p>
+                <p>{{item.lname}}</p>
+                <p style="color: #9a7468;">$ {{item.price}}</p>
+            </div>
+        </div>
+    </div>
+</div>
